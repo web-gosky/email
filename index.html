@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<script type="text/javascript">
+		</script>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				font-family: "arial rounded mt bold";
+			}
+			
+			ul,
+			li {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			
+			.top {
+				width: 100%;
+				height: 64px;
+				line-height: 64px;
+				overflow: hidden;
+				border-bottom: 1px solid #1ce1be;
+			}
+			
+			.top .left {
+				float: left;
+			}
+			
+			.top .left img {
+				width: 110px;
+				height: 30px;
+				margin-left: 10px;
+				margin-top: 18px;
+			}
+			
+			.top .right {
+				float: right;
+			}
+			
+			.top .right img {
+				width: 15px;
+				margin-right: 10px;
+			}
+			
+			.ul {
+				width: 95%;
+				height: auto;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			
+			.ul li {
+				width: 100%;
+				color: #999;
+				font-size: 12px;
+				border-bottom: 1px solid #1ce1be;
+				height: 40px;
+				line-height: 40px;
+			}
+			
+			.ul li input {
+				color: #333;
+				font-size: 12px;
+				width: 70%;
+				margin-left: 5px;
+				outline: none;
+				border: none;
+			}
+			
+			.text {
+				width: 95%;
+				height: auto;
+				padding-left: 5px;
+				border-left: 4px solid #1ce1be;
+				color: #111;
+				font-size: 12px;
+				margin-top: 25px;
+			}
+			
+			.btn {
+				width: 95%;
+				color: #fff;
+				border-radius: 6px;
+				background-color: #1ce1be;
+				text-align: center;
+				font-size: 15px;
+				display: block;
+				height: 40px;
+				line-height: 40px;
+				margin: 0 auto;
+				margin-top: 25px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="top">
+			<div class="left"><img src="img/logo@3x.png"></div>
+		<!--	<div class="right"><img src="img/xx.png"></div>-->
+		</div>
+		<ul class="ul">
+			<li>Addressee:<input type="text" value="" id="name" /></li>
+			<li>Sender:<input type="text" value="uersername@eduplated.com" disabled="disabled" /></li>
+			<li>Theme:<input type="text" value="uersername@eduplated.com" disabled="disabled" /></li>
+			<dv class="text">
+				EduPlated logo on top left, menu bar on the top right, clear “Get Started” call to action on top of a static image of food + technology + human component mentioned above. Nice above the fold example of the layout here,
+				</dv>i
+		</ul>
+		<a class="btn">SEND OUT</a>
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script>
+			$(function() {
+				$(".btn").click(function() {
+					var a = $("#name").val();
+					if(a == "" || a == "Please enter the addressee") {
+						$("#name").val("Please enter the addressee");
+						
+
+						return false;
+					}
+
+				})
+				$("#name").focus(function(){
+						var a = $("#name").val();
+							if(a == "Please enter the addressee") {
+						$("#name").val("");
+					
+
+						return false;
+					}
+							
+				})
+
+			})
+		</script>
+	</body>
+
+</html>
